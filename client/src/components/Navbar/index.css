@@ -4,12 +4,14 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    width: 100%;
   }
   
   .menu-bars {
-    margin-left: 2rem;
+    
     font-size: 2rem;
     background: none;
+   ;
   }
   
   .nav-menu {

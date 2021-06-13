@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../../firebase'
+import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 
 export default function Index() {
 
@@ -36,15 +37,44 @@ export default function Index() {
     
 
     return (
-        <div className ="text-center"style={{paddingTop:"20%"}}>
-            <h1>Je suis la page index (Authenfication)</h1>
+        <div className ="text-center"style={{paddingTop:"20%"}} responsive="sm">
+            
+            
+            <Container>
+    <Row style={{ marginTop: '100px' }}>
+        <Col md={{span: 6, offset: 3}}>
 
-            <form action="">
-                <input type="text" name="name" value={state.name} onChange={ handleChange } />
-                <input type="email" name="email" value={state.email} onChange={ handleChange } />
-                <input type="text" name="age" value={state.age} onChange={ handleChange } />
-            </form>
-            <button onClick={handleAddUser}>add</button>
+        <Form >
+                <input 
+                    label="name"
+                    placeholder="name"
+                   
+                    type="name"value={state.name} onChange={ handleChange } 
+                    
+                />
+             <input 
+                    label="email"
+                    placeholder="Email"
+                   
+                    type="email"value={state.email} onChange={ handleChange } 
+                    
+                />
+                <input 
+                    label="agel"
+                    placeholder="age"
+                   
+                    type="age"value={state.age} onChange={ handleChange } 
+                    
+                />
+
+                
+            </Form>
+            <Button variant="primary" type="submit" onClick={handleAddUser}>add</Button>
+            </Col>
+    </Row>
+    
+</Container>
+
         </div>
     )
 }
